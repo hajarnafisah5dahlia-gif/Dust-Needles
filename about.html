@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Dust & Needles</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Base Setup & Background */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
@@ -23,7 +26,6 @@
             padding: 20px;
         }
 
-        /* Container Kad Utama (Tema Clean/Minimalist) */
         .about-container {
             background-color: #f7f7f7;
             width: 100%;
@@ -35,9 +37,9 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            overflow: hidden; /* Penting: Supaya bucu footer ikut rounded kotak putih */
         }
 
-        /* Header Navigation */
         .header {
             display: flex;
             justify-content: space-between;
@@ -47,12 +49,12 @@
         }
 
         .logo {
-            font-weight: bold;
-            font-size: 24px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 26px;
             color: #1a1a1a;
         }
 
-        /* Navigasi Menggunakan Unordered List (UL) */
         #nav-links {
             display: flex;
             list-style: none;
@@ -75,7 +77,6 @@
             border-bottom: 2px solid #000;
         }
 
-        /* Kandungan Utama (Layout 2 Column) */
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -101,7 +102,6 @@
             }
         }
 
-        /* Animasi Piring Hitam (Vinyl) */
         .vinyl-wrapper {
             display: flex;
             justify-content: center;
@@ -122,7 +122,6 @@
             animation: spin 6s linear infinite; 
         }
 
-        /* Alur/Garisan pada Piring Hitam */
         .vinyl::before {
             content: '';
             position: absolute;
@@ -132,7 +131,6 @@
             border-radius: 50%;
         }
 
-        /* Label Tengah Piring Hitam (Center Label) */
         .vinyl-center {
             width: 90px;
             height: 90px;
@@ -145,22 +143,23 @@
             align-items: center;
             text-align: center;
             color: #111;
-            font-weight: bold;
-            font-size: 11px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
             box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
             padding: 5px;
             overflow: hidden;
         }
 
         .vinyl-center span {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 8px;
             font-weight: normal;
             opacity: 0.8;
             margin-top: 2px;
-            line-height: 1;
+            line-height: 1.1;
         }
 
-        /* Lubang Tengah */
         .vinyl-center::after {
             content: '';
             position: absolute;
@@ -171,7 +170,6 @@
             box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
         }
 
-        /* Teks Maklumat Halaman About */
         .about-text {
             display: flex;
             flex-direction: column;
@@ -179,35 +177,33 @@
         }
 
         .about-text h2 {
-            font-size: 28px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 30px;
             color: #1a1a1a;
-            position: relative;
+            font-weight: 600;
         }
 
         .about-text p {
             color: #555;
             line-height: 1.6;
             font-size: 15px;
+            text-align: justify; /* Kiri kanan sama rata */
         }
 
-        /* Keyframes untuk Animasi Berpusing 360 darjah */
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Footer Kad */
+        /* BAHAGIAN FOOTER COKLAT BERUBAH DI SINI */
         .footer {
             text-align: center;
-            font-size: 12px;
-            color: #999;
-            margin-top: 10px;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 15px;
+            font-size: 13px;
+            color: #f4eae1; 
+            background-color: #4a3329; /* Warna Rich Brown */
+            margin: 20px -40px -40px -40px; /* Tarik rapat ke dinding */
+            padding: 20px;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
