@@ -431,66 +431,38 @@ nav ul.show { display: flex; }
 .split-content-side { padding: 30px 20px; }
 }
 
-/* STREAMING_CHUNK:Menambah gaya animasi emoji muzik melayang... /
-/ --- ANIMASI EMOJI MUZIK MELAYANG (PLAYLIST PAGE) --- /
+
+/* --- ANIMASI EMOJI MUZIK MELAYANG --- */
 .music-notes {
-position: absolute;
-top: 50%;
-left: 50%;
-width: 100%;
-height: 100%;
-transform: translate(-50%, -50%);
-pointer-events: none; / Supaya tak mengganggu klik pada piring /
-z-index: 10;
-opacity: 0; / Sorok pada awalnya */
-transition: opacity 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+    z-index: 10;
+    opacity: 0; 
+    transition: opacity 0.5s;
 }
 
-/* PENTING: Emoji hanya muncul apabila piring hitam sedang 'spin' */
+/* Emoji hanya muncul bila piring hitam sedang 'spin' */
 .vinyl-container.spin .music-notes {
-opacity: 1;
+    opacity: 1;
 }
 
 .note {
-position: absolute;
-font-size: 24px;
-opacity: 0; /* Mula-mula tak nampak */
+    position: absolute;
+    font-size: 24px;
+    opacity: 0; 
 }
 
-/* Animasi untuk Nota 1 (Kiri Atas) */
-.note1 {
-top: 30%;
-left: 20%;
-animation: floatNote 3s linear infinite;
-animation-delay: 0s;
-}
+.note1 { top: 20%; left: 20%; animation: floatNote 3s linear infinite; }
+.note2 { top: 20%; right: 20%; animation: floatNote 3.5s linear infinite; animation-delay: 1s; }
+.note3 { top: 10%; left: 45%; animation: floatNote 4s linear infinite; animation-delay: 2s; }
 
-/* Animasi untuk Nota 2 (Kanan Atas) */
-.note2 {
-top: 40%;
-right: 20%;
-animation: floatNote 3.5s linear infinite;
-animation-delay: 1s;
-}
-
-/* Animasi untuk Nota 3 (Atas Tengah) */
-.note3 {
-top: 20%;
-left: 45%;
-animation: floatNote 4s linear infinite;
-animation-delay: 2s;
-}
-
-/* Gaya pergerakan terapung dan hilang /
 @keyframes floatNote {
-0% {
-transform: translateY(0) scale(0.5);
-opacity: 0;
-}
-30% {
-opacity: 1; / Paling terang di tengah /
-}
-100% {
-transform: translateY(-80px) scale(1.5); / Terapung 80px ke atas dan membesar /
-opacity: 0; / Hilang */
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    30% { opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
 }
